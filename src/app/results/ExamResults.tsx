@@ -34,7 +34,7 @@ export default function ExamResults() {
             setLoading(true);
             setError("");
 
-            const response = await fetch(`api/fetch-html?url=${encodeURIComponent(url)}`);
+            const response = await fetch(`/api/fetch-html?url=${encodeURIComponent(url)}`, { mode: 'no-cors' });
             if (!response.ok) throw new Error("Failed to fetch HTML content");
 
             const html = await response.text();
