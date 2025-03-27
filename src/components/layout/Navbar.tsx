@@ -25,7 +25,7 @@ const Navbar = () => {
             {/* Centering navbar content */}
             <div className="flex items-center justify-between w-full max-w-screen-xl mx-auto">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-bold text-primary">MyLogo</Link>
+                <Link href="/" className="text-2xl font-bold text-primary">WebToolsPro</Link>
 
                 {/* Navigation Links */}
                 <ul className="hidden md:flex items-center gap-6 text-gray-800">
