@@ -41,7 +41,7 @@ export default function HeroSection() {
                             <div className="absolute -inset-4 bg-[#e9f1f7] rounded-2xl blur-2xl opacity-50"></div>
                             <div className="relative bg-white border border-gray-100 rounded-2xl shadow-lg p-6">
                                 <div className="grid grid-cols-3 gap-4">
-                                    {['PDF', 'DOCX', 'JPG', 'PNG', 'XLSX', 'MP4'].map((format, index) => (
+                                    {['PDF', 'DOCX', 'JPG', 'PNG', 'XLSX', 'MP4'].map((format) => (
                                         <div
                                             key={format}
                                             className="bg-[#f4f7f6] rounded-lg p-4 text-center hover:bg-[#e9f1f7] transition-colors"

@@ -9,7 +9,7 @@ export default function FeaturesSection() {
             </h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
                 Experience <span className="font-semibold text-[#3498db]">fast, secure, and hassle-free</span> online tools.
-                Whether you're converting files, optimizing images, or analyzing data, our services are **free, high-quality, and accessible**—right from your browser!
+                Whether you&apos;re converting files, optimizing images, or analyzing data, our services are **free, high-quality, and accessible**—right from your browser!
             </p>
 
             {/* ✅ Features Grid */}

@@ -44,7 +44,7 @@ export default function GetStarted() {
 
             {/* ✅ Signup Link */}
             <p className="mt-6 text-gray-500 text-sm">
-                Don't have an account?
+                Don&apos;t have an account?
                 <a href="/signup" className="text-[#3498db] font-semibold hover:underline ml-1">Sign up here</a>.
             </p>
         </section>

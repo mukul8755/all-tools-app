@@ -8,7 +8,7 @@ export default function ContactUs() {
                 Get in Touch
             </h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-                Have any questions or need support? Fill out the form below, and we'll get back to you as soon as possible.
+                Have any questions or need support? Fill out the form below, and we&apos;ll get back to you as soon as possible.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
