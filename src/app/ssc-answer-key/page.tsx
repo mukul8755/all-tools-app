@@ -21,7 +21,7 @@ export default function AnswerKeyPage() {
             alert("⚠️ Please enter an Answer Key URL.");
             return;
         }
-        router.push(`/results?sscUrl=${encodeURIComponent(sscUrl)}&category=${category}&gender=${gender}&horizontalCategory=${horizontalCategory}`);
+        router.push(`results?sscUrl=${encodeURIComponent(sscUrl)}&category=${category}&gender=${gender}&horizontalCategory=${horizontalCategory}`);
     };
 
     return (
@@ -125,7 +125,7 @@ export default function AnswerKeyPage() {
                     {/* ✅ Submit Button */}
                     <button
                         onClick={fetchExamResults}
-                        className="w-full py-3 font-semibold text-white bg-[#3498db] hover:bg-[#217dbb] rounded-md shadow-lg transition-all"
+                        className="w-full py-3 font-semibold text-white bg-[#3498db] hover:bg-[#217dbb] rounded-md shadow-lg transition-all cursor-pointer"
                     >
                         Submit & Check Results
                     </button>
