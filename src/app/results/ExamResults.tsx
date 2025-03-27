@@ -53,6 +53,11 @@ export default function ExamResults() {
     // Process HTML and extract results
     const processExamResults = (doc: Document) => {
         const sections = doc.querySelectorAll(".section-lbl");
+
+        if (sections.length === 0) {
+            setError("No sections found in the HTML. Please check your URL.");
+            return;
+        }
         const results: ResultData = {};
 
         sections.forEach((section) => {
@@ -133,7 +138,14 @@ export default function ExamResults() {
                 </div>
             )}
 
-            {error && <p className="text-red-500">{error}</p>}
+            {error && <div className="text-red-500 text-center">{error}<br></br>
+                <button
+                    onClick={() => router.push("/ssc-answer-key")}
+                    className="px-4 mt-5 py-2 text-sm bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition-all"
+                >
+                    Upload Again
+                </button>
+            </div>}
 
             {resultData && (
                 <div id="results-container" className="w-full max-w-2xl bg-white p-6 shadow-lg rounded-lg mt-6">
