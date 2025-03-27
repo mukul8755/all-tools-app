@@ -21,12 +21,12 @@ export async function GET(req: Request) {
             status: 200,
             headers: { "Content-Type": "text/html" },
         });
-    } catch (error:any) {
+    } catch (error) {
         console.error("Fetch error:", error);
         return NextResponse.json({
             error: "Error fetching data.",
-            message: error?.message,
-            details: error?.response?.data || error?.toString()
+            message: JSON.stringify(error),
+            details: JSON.stringify(error) || error?.toString()
         }, { status: 500 });
     }
 }
