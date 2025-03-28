@@ -2,11 +2,10 @@ import axios from "axios";
 import { NextResponse } from "next/server";
 
 // ✅ API Route Handler (Next.js 13+)
-export async function GET(req: Request) {
+export async function POST(req: Request) {
     try {
-        // Extract the target URL from the query parameters
-        const { searchParams } = new URL(req.url);
-        const url = searchParams.get("url");
+        // Parse the request body
+        const { url } = await req.json();
 
         if (!url) {
             return NextResponse.json({ error: "Missing URL parameter." }, { status: 400 });
@@ -25,8 +24,7 @@ export async function GET(req: Request) {
         console.error("Fetch error:", error);
         return NextResponse.json({
             error: "Error fetching data.",
-            message: JSON.stringify(error),
-            details: JSON.stringify(error) || error?.toString()
+            message: error instanceof Error ? error.message : "Unknown error",
         }, { status: 500 });
     }
 }

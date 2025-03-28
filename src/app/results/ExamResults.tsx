@@ -34,7 +34,14 @@ export default function ExamResults() {
             setLoading(true);
             setError("");
 
-            const response = await fetch(`/api/fetch-html?url=${encodeURIComponent(url)}`, { mode: 'no-cors' });
+            const response = await fetch("/api/fetch-html", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ url }),
+            });
+
             if (!response.ok) throw new Error("Failed to fetch HTML content");
 
             const html = await response.text();
@@ -49,6 +56,7 @@ export default function ExamResults() {
             setLoading(false);
         }
     };
+
 
     // Process HTML and extract results
     const processExamResults = (doc: Document) => {
